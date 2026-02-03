@@ -1,6 +1,8 @@
 #define HEAP_SIZE 4096
 static unsigned char heap[HEAP_SIZE]; 
 
+// 
+
 typedef struct chunk {
 		size_t size;
 		int free;
@@ -24,7 +26,7 @@ void *my_malloc(size_t size) {
 				
 				return (void *)(chunk + 1);
 			}
-			
+// procurar chunk livre			
 			chunk_t *curr = heap_start;
 			
 			while(curr) {
@@ -39,6 +41,8 @@ void *my_malloc(size_t size) {
 			
 }
 
+// nao chega a ser muito funcional, ja que eu so consigo alocar uma vez
+
 void my_free(void *ptr) {
 		if(!ptr)
 			return;
@@ -46,3 +50,5 @@ void my_free(void *ptr) {
 		chunk_t *chunk = (chunk_t *)ptr - 1;
 		chunk->free = 1;
 }
+
+
