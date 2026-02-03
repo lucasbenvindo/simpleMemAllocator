@@ -10,4 +10,4 @@ if(heap_start == NULL) {
 }
 `
 The problem here is that I am not able to allocate memory 2 times.
-Trying to figure out what I can improve my algorithm.
+Trying to figure out how I can improve my algorithm.
