@@ -23,7 +23,7 @@ void init_heap() {
 				return;
 			}
 		
-		chunk_t *initial_chunk = (chunk_t*)heap_start;
+		chunk_t *initial_chunk;
 		
 		initial_chunk = (chunk_t *)heap_start;
 		initial_chunk->size = HEAP_SIZE - sizeof(chunk_t);
