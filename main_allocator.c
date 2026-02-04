@@ -66,7 +66,6 @@ void *my_malloc(size_t size) {
 			
 }
 
-// nao chega a ser muito funcional, ja que eu so consigo alocar uma vez
 
 void my_free(void *ptr) {
 		if(!ptr)
